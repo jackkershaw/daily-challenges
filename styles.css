@@ -1,0 +1,44 @@
+@font-face {
+  font-family: P22Johnston;
+  src: url(fonts/P22UndergroundBook.otf), format("otf");
+}
+
+html {
+  box-sizing: border-box;
+  font-family: P22Johnston;
+  background-color: #000000;
+  margin: 0px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #e1e1e1;
+  font-size: 6vw;
+}
+
+#date {
+  font-size: 4vw;
+  margin-bottom: 8vw;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 80vw;
+  margin: 2vw 10vw;
+  padding: 5vw;
+  border: 3px solid #ffffff;
+  background-color: #e05949;
+  font-size: 4vw;
+}
+
+button-clicked {
+  background-color: #bcc9bb;
+}
