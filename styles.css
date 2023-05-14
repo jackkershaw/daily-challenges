@@ -28,6 +28,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 10vw;
 }
 
 button {
@@ -37,8 +38,4 @@ button {
   border: 3px solid #e1e1e1;
   background-color: #e05949;
   font-size: 4vw;
-}
-
-button-clicked {
-  background-color: #bcc9bb;
 }
