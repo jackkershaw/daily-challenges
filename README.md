@@ -1,11 +1,14 @@
 # daily-challenges
  Simple website built for my partner to link to all the daily challenges (like Wordle etc.)
 
-### Things i'd like to implement later 
-- Save button click state in local storage 
-- Test whether button colour resets to red at end of day
+## Changelog
+- Changed the colour scheme to Wordle's based on user feedback. 
+
+### Things i'd like to implement later when I have the knowledge
+- Learn how to use local storage to: 
+    - Save button click state so page reload doesn't change it.
+    -  Reset button colour when new day
+    -  Button so people can add their own
 - Continue testing out things in test.js file
 - Add pop up to explain what it is and how to use
-- Button so people can add their own (this gets stored in local storage)
-- Font load on Chrome 
-- 
+- Font load on Chrome

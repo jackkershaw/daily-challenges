@@ -1,5 +1,5 @@
 // getting current date and time //
-const currentDateTime = new Date().toLocaleString("en-GB", {
+let currentDateTime = new Date().toLocaleString("en-GB", {
   timeZone: "Europe/London",
 });
 
@@ -11,17 +11,6 @@ dateOnPage.textContent = currentDateTime;
 const buttons = document.querySelectorAll("button");
 buttons.forEach(function buttonClicked(button) {
   button.addEventListener("click", () => {
-    button.style.backgroundColor = "#bcc9bb";
-    localStorage.buttonStyle.setItem(button.style.backgroundColor);
+    button.style.backgroundColor = "#608B54";
   });
 });
-
-// change button colour back to red if new day //
-let storedDate = localStorage.getItem("lastVisitedDate");
-if (
-  storedDate !== currentDateTime ||
-  storedDate !== currentDateTime.toDateString()
-) {
-  localStorage.setItem("lastVisitedDate", currentDateTime);
-  button.style.backgroundColor = "#e05949";
-}

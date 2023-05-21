@@ -6,14 +6,14 @@
 html {
   box-sizing: border-box;
   font-family: P22Johnston;
-  background-color: #000000;
+  background-color: #121213;
   margin: 0px;
 }
 
 h1,
 h2 {
   text-align: center;
-  color: #e1e1e1;
+  color: #ffffff;
   font-size: 6vw;
 }
 
@@ -35,7 +35,8 @@ button {
   width: 80vw;
   margin: 2vw 10vw;
   padding: 5vw;
-  border: 3px solid #e1e1e1;
-  background-color: #e05949;
+  border: 3px solid #ffffff;
+  background-color: #3a3a3c;
   font-size: 4vw;
+  color: #ffffff;
 }
