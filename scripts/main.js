@@ -1,11 +1,12 @@
-// getting current date and time //
-let currentDateTime = new Date().toLocaleString("en-GB", {
-  timeZone: "Europe/London",
+// getting current date //
+let currentDate = new Date().toLocaleString("default", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 });
-
-// date and time showing on page //
+// date showing on page //
 const dateOnPage = document.getElementById("date");
-dateOnPage.textContent = currentDateTime;
+dateOnPage.textContent = currentDate;
 
 // buttons going green when clicked//
 const buttons = document.querySelectorAll("button");
