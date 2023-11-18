@@ -15,29 +15,70 @@ h1,
 h2 {
   text-align: center;
   color: #ffffff;
+}
+
+h1 {
   font-size: 6vw;
 }
 
 #date {
   font-size: 4vw;
-  margin-bottom: 8vw;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 10vw;
+  margin-bottom: 2vh;
 }
 
 button {
-  width: 80vw;
   margin: 2vw 10vw;
   padding: 5vw;
+  width: 80vw;
   border: 3px solid #ffffff;
   background-color: #3a3a3c;
   font-size: 4vw;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* mobile only */
+
+@media only screen and (max-width: 1024px) {
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10vw;
+  }
+}
+
+/* desktop only */
+
+@media only screen and (min-width: 1025px) {
+  button {
+    width: 40vw;
+    height: 1vh;
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  #date {
+    font-size: 2rem;
+  }
 }
