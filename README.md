@@ -4,13 +4,14 @@ Simple website built for my partner to link to all the daily challenges (like Wo
 
 ## Changelog
 
-After making the initial, mobile first design I decided to make some changes to the site.
+After making the initial design I decided to make some changes to the site.
 
 - Changed the colour scheme to Wordle's based on user feedback.
 - Ran Google Lighthouse on the site to check accessibility. Mostly positive, but it instructed me to:
   - Add a meta description
   - Use the font display option to swap font on page load.
-- Media query for desktop view
+- Media query for desktop view. I originally designed for mobile which made things too big for desktop. Bizarrely I used vw for the font sizes so I changed that too.
+- Added a reset button.
 
 ## To do
 
