@@ -10,8 +10,11 @@ dateOnPage.textContent = currentDate;
 
 // buttons going green when clicked//
 const buttons = document.querySelectorAll("button");
-buttons.forEach(function buttonClicked(button) {
+buttons.forEach(function (button) {
   button.addEventListener("click", () => {
-    button.style.backgroundColor = "#608B54";
+    button.clicked = true;
+    if (button.class !== ignore) {
+      button.style.backgroundColor = "#608B54";
+    }
   });
 });
