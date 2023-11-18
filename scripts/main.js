@@ -13,7 +13,7 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach(function (button) {
   button.addEventListener("click", () => {
     button.clicked = true;
-    if (button.class !== ignore) {
+    if (!button.classList.contains("noColorChange")) {
       button.style.backgroundColor = "#608B54";
     }
   });
