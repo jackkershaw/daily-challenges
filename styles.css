@@ -1,19 +1,19 @@
 @font-face {
   font-family: P22Johnston;
-  src: url(fonts/P22UndergroundBook.otf), format("otf");
+  src: url(fonts/P22UndergroundBook.otf), format("opentype");
   font-display: swap;
 }
 
 html {
   box-sizing: border-box;
-  font-family: P22Johnston;
+  font-family: P22Johnston, sans-serif;
   background-color: #121213;
+  color: #ffffff;
 }
 
 h1,
 h2 {
   text-align: center;
-  color: #ffffff;
 }
 
 h1 {
@@ -27,16 +27,17 @@ h1 {
 
 button {
   margin: 1vh 10vw;
-  padding: 5vw;
+  padding: 1.25rem;
   width: 80vw;
+  height: 5vh;
   border: 3px solid #ffffff;
   background-color: #3a3a3c;
-  font-size: 4vw;
-  color: #ffffff;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #ffffff;
 }
 
 .buttons {
@@ -53,13 +54,6 @@ a {
   text-decoration: none;
 }
 
-/* mobile only */
-
-@media only screen and (max-width: 1024px) {
-  .buttons {
-  }
-}
-
 /* desktop only */
 
 @media only screen and (min-width: 1025px) {
@@ -67,10 +61,7 @@ a {
     width: 40vw;
     height: 1vh;
     font-size: 1.25rem;
-    padding: 1rem;
     margin: 1vh 0vw;
-  }
-  .buttons {
   }
 
   h1 {
