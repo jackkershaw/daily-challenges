@@ -13,7 +13,7 @@ After making the initial design I decided to make some changes to the site.
 - Media query for desktop view. I originally designed for mobile which made things too big for desktop. Bizarrely I used vw for the font sizes so I changed that too.
 - Added a reset button.
 - Used local storage to save button click state so page reload doesn't change it and reset button colour when new day.
--
+- Edited the CSS to make it look better on different screen sizes.
 
 ## To do
 
