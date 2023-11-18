@@ -22,3 +22,4 @@ After making the initial design I decided to make some changes to the site.
   - <button class="noColorChange">
       <input type="text" placeholder="Add your own site" />
     </button>
+- Add to home screen button
