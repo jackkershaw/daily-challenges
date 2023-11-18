@@ -8,7 +8,6 @@ html {
   box-sizing: border-box;
   font-family: P22Johnston;
   background-color: #121213;
-  margin: 0px;
 }
 
 h1,
@@ -18,16 +17,16 @@ h2 {
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: 3rem;
 }
 
 #date {
-  font-size: 4vw;
+  font-size: 2rem;
   margin-bottom: 2vh;
 }
 
 button {
-  margin: 2vw 10vw;
+  margin: 1vh 10vw;
   padding: 5vw;
   width: 80vw;
   border: 3px solid #ffffff;
@@ -60,14 +59,19 @@ a {
 /* desktop only */
 
 @media only screen and (min-width: 1025px) {
+  header {
+    border-bottom: 1px solid #7d7575;
+  }
+
   button {
     width: 40vw;
     height: 1vh;
-    font-size: 1.5rem;
-    padding: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    padding: 1rem;
+    margin: 1vh 0vw;
   }
   .buttons {
+    margin-top: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -75,10 +79,10 @@ a {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   #date {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
