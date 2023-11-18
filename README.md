@@ -14,12 +14,9 @@ After making the initial design I decided to make some changes to the site.
 - Added a reset button.
 - Used local storage to save button click state so page reload doesn't change it and reset button colour when new day.
 - Edited the CSS to make it look better on different screen sizes.
+- Added view on Github button
 
 ## To do
 
-- Add pop up to explain what it is and how to use, like on Wordle.
 - Button so people can add their own
-  - <button class="noColorChange">
-      <input type="text" placeholder="Add your own site" />
-    </button>
 - Add to home screen button

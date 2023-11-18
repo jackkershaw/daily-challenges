@@ -55,6 +55,11 @@ a {
   color: #ffffff;
 }
 
+#code {
+  font-family: monospace;
+  border: none;
+}
+
 /* desktop only */
 
 @media only screen and (min-width: 1025px) {
