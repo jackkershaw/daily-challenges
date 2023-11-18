@@ -1,6 +1,7 @@
 @font-face {
   font-family: P22Johnston;
   src: url(fonts/P22UndergroundBook.otf), format("otf");
+  font-display: swap;
 }
 
 html {
