@@ -12,16 +12,13 @@ After making the initial design I decided to make some changes to the site.
   - Use the font display option to swap font on page load.
 - Media query for desktop view. I originally designed for mobile which made things too big for desktop. Bizarrely I used vw for the font sizes so I changed that too.
 - Added a reset button.
+- Used local storage to save button click state so page reload doesn't change it and reset button colour when new day.
+-
 
 ## To do
 
-- Add a reset button
-- Use local storage to:
-  - Save button click state so page reload doesn't change it.
-  - Reset button colour when new day
-  - Button so people can add their own
-  - use local storage to set and get whether link clicked and reset everyday
-- Continue testing out things in test.js file
-- Add pop up to explain what it is and how to use
-- Font load on Chrome
-- Add your own site button/option
+- Add pop up to explain what it is and how to use, like on Wordle.
+- Button so people can add their own
+  - <button class="noColorChange">
+      <input type="text" placeholder="Add your own site" />
+    </button>
