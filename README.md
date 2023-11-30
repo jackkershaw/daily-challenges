@@ -15,6 +15,7 @@ After making the initial design I decided to make some changes to the site.
 - Used local storage to save button click state so page reload doesn't change it and reset button colour when new day.
 - Edited the CSS to make it look better on different screen sizes.
 - Added view on Github button
+- Ran Google Lighthouse to check the accessibility of the site and got a report with 100 for all categories. ![Lighthouse report for the site showing full 100% on all categories](image.png)
 
 ## To do
 
