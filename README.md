@@ -16,6 +16,7 @@ After making the initial design I decided to make some changes to the site.
 - Edited the CSS to make it look better on different screen sizes.
 - Added view on Github button
 - Ran Google Lighthouse to check the accessibility of the site and got a report with 100 for all categories. ![Lighthouse report for the site showing full 100% on all categories](image.png)
+- Deleted some challenges from the website to streamline it for new users. Added the excellent Hexcodle, a useful tool for developers learning about hexcodes and base-16.
 
 ## To do
 
