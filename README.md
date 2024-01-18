@@ -22,3 +22,4 @@ After making the initial design I decided to make some changes to the site.
 
 - Button so people can add their own
 - Add to home screen button
+- Improve desktop ui - maybe two columns or force it to be mobile view.
