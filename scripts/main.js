@@ -46,3 +46,9 @@ window.onload = function () {
     }
   });
 };
+
+document.getElementById("closePopup").addEventListener("click", () => {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("header").style.display = "block";
+  document.getElementById("mainContent").style.display = "flex";
+});
