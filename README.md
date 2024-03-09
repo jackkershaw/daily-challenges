@@ -1,8 +1,8 @@
-# daily-challenges
+# Daily Challenges
 
-Simple website to link to all the daily challenges (like Wordle etc.)
+Website to link to all the daily challenges (like Wordle etc.).
 
-## Changelog
+## How I Built It
 
 After making the initial design I decided to make some changes to the site.
 
