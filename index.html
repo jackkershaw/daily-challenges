@@ -13,13 +13,14 @@
     />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css"
   </head>
   <body>
-    <header role="banner" class="hidden" id="header">
+    <header role="banner" class="hidden scale-up-top" id="header">
       <h1>Daily Challenges</h1>
       <h2 id="date"></h2>
     </header>
-    <div role="main" id="popup">
+    <div role="main" id="popup" class="scale-up-bottom">
       <h1>How To Play Daily Challenges</h1>
       <p>
         This is a website for collecting all the Wordle-adjacent daily
@@ -38,7 +39,11 @@
         <button class="noColorChange">View the code</button>
       </a>
     </div>
-    <div class="buttons hidden" role="main" id="mainContent">
+    <div
+      class="buttons hidden scale-up-bottom"
+      role="main"
+      id="mainContent"
+    >
       <a
         href="https://www.nytimes.com/games/wordle/index.html"
         target="_blank"
