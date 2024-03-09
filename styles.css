@@ -1,12 +1,12 @@
 @font-face {
-  font-family: P22Johnston, serif;
+  font-family: P22Johnston;
   src: url(fonts/P22UndergroundBook.otf), format("opentype");
   font-display: swap;
 }
 
 html {
   box-sizing: border-box;
-  font-family: P22Johnston, sans-serif;
+  font-family: P22Johnston, serif;
   background-color: #121213;
   color: #ffffff;
 }
