@@ -45,8 +45,15 @@ window.onload = function () {
       }
     }
   });
+  // if popup screen has already been shown, don't display it (set by if closepopup button in local storage)
+  if (localStorage.getItem("closePopup")) {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("header").style.display = "block";
+    document.getElementById("mainContent").style.display = "flex";
+  }
 };
 
+// display content when close intro popup //
 document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("popup").style.display = "none";
   document.getElementById("header").style.display = "block";
