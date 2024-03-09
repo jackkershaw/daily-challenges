@@ -42,6 +42,11 @@ button {
   color: #ffffff;
 }
 
+button:hover {
+  background-color: #29292a;
+  box-shadow: 0 0 2px #ffffff;
+}
+
 .buttons {
   display: flex;
   flex-direction: column;
