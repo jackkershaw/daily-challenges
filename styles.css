@@ -101,3 +101,13 @@ p {
     height: 80vh;
   }
 }
+@media only screen and (max-width: 768px) {
+  button {
+    width: 90vw;
+    margin: 0.5vh 5vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
