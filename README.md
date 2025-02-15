@@ -21,7 +21,3 @@ After making the initial design I decided to make some changes to the site.
 - Added an intro screen, like on [Wordle](https://www.nytimes.com/games/wordle/index.html) to explain what the website is about. Stored in local storage whether this has been clicked - if it has ever (i.e. not just today), don't show the popup again.
 - Improved desktop css to show all the content.
 - Added animations using [Animista](https://animista.net).
-
-## To do later:
-
-- Button so people can add their own
