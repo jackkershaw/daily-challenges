@@ -59,3 +59,18 @@ document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("header").style.display = "block";
   document.getElementById("mainContent").style.display = "flex";
 });
+
+
+// crossword just on weekdays 
+
+const today = new Date().getDay();
+
+if (today >= 1 && today <= 5) { document.getElementById("crossword").innerHTML = `
+        <a href="https://www.newyorker.com/puzzles-and-games-dept/crossword" target="_blank">
+          <button id="new yorker crossword" aria-label="Play the new yorker crossword">
+            Crossword
+          </button>
+        </a>
+      `;
+    }
+  });
