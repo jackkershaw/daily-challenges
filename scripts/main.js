@@ -61,16 +61,3 @@ document.getElementById("closePopup").addEventListener("click", () => {
 });
 
 
-// crossword just on weekdays 
-
-const today = new Date().getDay();
-
-if (today >= 1 && today <= 5) { document.getElementById("crossword").innerHTML = `
-        <a href="https://www.newyorker.com/puzzles-and-games-dept/crossword" target="_blank">
-          <button id="new yorker crossword" aria-label="Play the new yorker crossword">
-            Crossword
-          </button>
-        </a>
-      `;
-    }
-  });
