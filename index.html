@@ -15,6 +15,19 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="animations.css" />
 <script defer src="https://umami.jackkershaw.pp.ua/script.js" data-website-id="6631bf3f-b159-41a3-a071-5b89e06f35e0"></script>
+<script> document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date().getDay();
+    if (today >= 1 && today <= 5) {
+      document.getElementById("crossword").innerHTML = `
+        <a href="https://www.newyorker.com/puzzles-and-games-dept/crossword" target="_blank">
+          <button id="new yorker crossword" aria-label="Play the new yorker crossword">
+            Crossword
+          </button>
+        </a>
+      `;
+    }
+  });
+</script>
   </head>
   <body>
     <header role="banner" class="hidden scale-up-top" id="header">
@@ -71,11 +84,7 @@
           Spelling Bee
         </button>
       </a>
-      <a href="https://wordslicer.com/" target="_blank">
-        <button id="worldslicer" aria-label="Play Word Slicer">
-          Word Slicer
-        </button>
-      </a>
+<div id="crossword"></div>
       <a href="https://60s.heardledecades.com/" target="_blank">
         <button id="heardle60s" aria-label="Play Heardle 60s">
           Heardle 60s
@@ -162,12 +171,9 @@
           Hexcodle
         </button>
       </a>
-<a href="https://www.newyorker.com/puzzles-and-games-dept/crossword" target="_blank">
-        <button
-          id="new yorker crossword"
-          aria-label="Play the new yorker crossword"
-        >
-          Crossword
+ <a href="https://wordslicer.com/" target="_blank">
+        <button id="worldslicer" aria-label="Play Word Slicer">
+          Word Slicer
         </button>
       </a>
       <button
