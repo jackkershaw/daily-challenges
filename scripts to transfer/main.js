@@ -1,17 +1,3 @@
-// getting current date //
-let currentDate = new Date().toLocaleString("default", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
-
-// date showing on page //
-const dateOnPage = document.getElementById("date");
-dateOnPage.textContent = currentDate;
-
-// getting all buttons //
-const buttons = document.querySelectorAll("button");
-
 // buttons going green when clicked and set local storage to button id and today's date//
 buttons.forEach(function (button) {
   button.addEventListener("click", () => {
@@ -59,5 +45,3 @@ document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("header").style.display = "block";
   document.getElementById("mainContent").style.display = "flex";
 });
-
-
