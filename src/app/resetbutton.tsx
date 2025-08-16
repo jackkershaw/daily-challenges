@@ -1,3 +1,4 @@
+/*
 <button
   id="reset"
   class="noColorChange"
@@ -5,3 +6,4 @@
 >
   RESET ALL
 </button>;
+*/
