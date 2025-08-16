@@ -1,4 +1,4 @@
-<div role="main" id="popup" class="scale-up-bottom">
+<div role="main" id="popup" className="scale-up-bottom">
   <h1>How To Play Daily Challenges</h1>
   <p>
     This is a website for collecting all the Wordle-adjacent daily
