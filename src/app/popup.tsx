@@ -1,3 +1,5 @@
+
+/*
 <div role="main" id="popup" className="scale-up-bottom">
   <h1>How To Play Daily Challenges</h1>
   <p>
@@ -30,3 +32,4 @@
     </button>
   </a>
 </div>;
+*/
