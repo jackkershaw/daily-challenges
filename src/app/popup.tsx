@@ -7,6 +7,8 @@ export default function Popup() {
     const popup = document.getElementById("popup");
     if (popup) {
       popup.style.display = "none";
+      localStorage.setItem("popupShown", "true");
+      window.location.reload();
     }
   }
 

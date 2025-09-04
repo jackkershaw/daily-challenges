@@ -1,6 +1,5 @@
 - Move to nextjs
 
-  - fix css approach
   - js functionality from before, step by step
 
     - on load, open popup. If displayed before, don't show.
