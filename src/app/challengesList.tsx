@@ -64,7 +64,7 @@ const clickButton = (url: string, id: string) => {
 
 export default function ChallengesList() {
   return (
-    <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2 mx-auto sm:max-w-2xl">
+    <div className="grid grid-cols-1 gap-y-3 mx-auto">
       {defaultChallenges.map((challenge) => (
         <a
           key={challenge.id}
