@@ -24,7 +24,7 @@ const defaultChallenges = [
   },
   {
     id: "newyorkercrossword",
-    name: "Crossword (New Yorker)",
+    name: "New Yorker Crossword",
     url: "https://www.newyorker.com/puzzles-and-games-dept/crossword",
   },
   {
@@ -64,7 +64,7 @@ const clickButton = (url: string, id: string) => {
 
 export default function ChallengesList() {
   return (
-    <div className="grid grid-cols-1 gap-2 py-4 sm:grid-cols-2">
+    <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2 mx-auto sm:max-w-2xl">
       {defaultChallenges.map((challenge) => (
         <a
           key={challenge.id}
@@ -73,14 +73,14 @@ export default function ChallengesList() {
           rel="noreferrer"
         >
           <button
-            className="font-bold
+            className="
               border border-gray-300 rounded-lg
               bg-gray-100 hover:bg-gray-200
-              transition-colors duration-200
+              transition-colors duration-200 rounded-xl
             "
             onClick={() => clickButton(challenge.url, challenge.id)}
           >
-            {challenge.name}
+            <p className="text-center m-auto">{challenge.name}</p>
           </button>
         </a>
       ))}
