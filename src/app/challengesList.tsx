@@ -62,6 +62,11 @@ const clickButton = (url: string, id: string) => {
   localStorage.setItem(id, currentDate);
 };
 
+const resetAll = () => {
+  localStorage.clear();
+  window.location.reload();
+};
+
 export default function ChallengesList() {
   return (
     <div className="grid grid-cols-1 gap-y-3 mx-auto">
@@ -84,6 +89,17 @@ export default function ChallengesList() {
           </button>
         </a>
       ))}
+      <button
+        className=" mt-8
+         border border-gray-300 rounded-lg
+              bg-gray-100 hover:bg-gray-200
+              transition-colors duration-200 rounded-xl
+            "
+        onClick={resetAll}
+        aria-label="Reset all challenges"
+      >
+        <p className="text-center m-auto">Reset</p>
+      </button>
     </div>
   );
 }
