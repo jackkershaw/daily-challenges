@@ -36,34 +36,6 @@ body {
   margin-bottom: 2vh;
 }
 
-button {
-  width: 80vw;
-  height: 5vh;
-  border: 3px solid #ffffff;
-  background-color: #3a3a3c;
-  font-size: 1.5rem;
-  display: flex;
-  text-align: center;
-  color: #ffffff;
-  transition: background-color 0.3s ease, transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
 #code {
   font-family: monospace;
 }
