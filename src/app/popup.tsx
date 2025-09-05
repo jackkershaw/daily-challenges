@@ -24,9 +24,10 @@ export default function Popup() {
         turn green. This resets everyday.
       </p>
 
-      <div className="flex-col space-y-4 justify-center items-center mx-auto py-8">
+      <div className="flex flex-col space-y-4 justify-center items-center mx-auto py-8">
         <button
-          className="rounded-xl max-w-xl"
+          className="rounded-xl max-w-xl border-gray-300 rounded-lg
+               bg-[#3a3a3c] hover:bg-neutral-800 w-50 h-10"
           onClick={closePopup}
           aria-label="Start playing daily challenges"
         >
@@ -37,7 +38,8 @@ export default function Popup() {
           target="_blank"
         >
           <button
-            className="rounded-xl max-w-xl"
+            className="rounded-xl max-w-xl border-gray-300 rounded-lg
+               bg-[#3a3a3c] hover:bg-neutral-800 w-50 h-10"
             id="code"
             aria-label="View source code on GitHub"
           >
