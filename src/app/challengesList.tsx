@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const currentDate = new Date().toLocaleString("default", {
   year: "numeric",
   month: "long",
@@ -68,6 +70,23 @@ const resetAll = () => {
 };
 
 export default function ChallengesList() {
+  const [addClicked, setAddClicked] = useState(false);
+  const [newChallengeName, setNewChallengeName] = useState("");
+  const [newChallengeUrl, setNewChallengeUrl] = useState("");
+
+  const handleAddChallenge = () => {
+    if (newChallengeName && newChallengeUrl) {
+      const newChallenge = {
+        id: newChallengeName.toLowerCase().replace(/\s+/g, ""),
+        name: newChallengeName,
+        url: newChallengeUrl,
+      };
+      defaultChallenges.push(newChallenge);
+      setNewChallengeName("");
+      setNewChallengeUrl("");
+      setAddClicked(false);
+    }
+  };
   return (
     <div className="grid grid-cols-1 gap-y-3 mx-auto">
       {defaultChallenges.map((challenge) => (
@@ -79,26 +98,66 @@ export default function ChallengesList() {
         >
           <button
             className="
-              border border-gray-300 rounded-lg
-              bg-gray-100 hover:bg-gray-200
+              border border-gray-300 rounded-lg w-50
+              bg-[#3a3a3c] hover:bg-neutral-800
+
               transition-colors duration-200 rounded-xl
             "
             onClick={() => clickButton(challenge.url, challenge.id)}
           >
-            <p className="text-center m-auto">{challenge.name}</p>
+            <p className="text-center">{challenge.name}</p>
           </button>
         </a>
       ))}
       <button
+        className=" mt-6
+         border border-gray-300 rounded-lg
+               bg-[#3a3a3c] hover:bg-neutral-800
+              transition-colors duration-200 rounded-xl
+            "
+        onClick={
+          addClicked
+            ? () => setAddClicked(false)
+            : () => setAddClicked(true)
+        }
+        aria-label="Reset all challenges"
+      >
+        <p className="text-center"> + Add Your Own</p>
+      </button>
+      {addClicked && (
+        <div className="flex flex-col items-center mt-4">
+          <input
+            type="text"
+            placeholder="Challenge Name"
+            value={newChallengeName}
+            onChange={(e) => setNewChallengeName(e.target.value)}
+            className="mb-2 p-2 border border-gray-300 rounded-lg w-48 bg-[#3a3a3c] text-white"
+          />
+          <input
+            type="text"
+            placeholder="Challenge URL"
+            value={newChallengeUrl}
+            onChange={(e) => setNewChallengeUrl(e.target.value)}
+            className="mb-2 p-2 border border-gray-300 rounded-lg w-48 bg-[#3a3a3c] text-white"
+          />
+          <button
+            onClick={handleAddChallenge}
+            className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          >
+            Add Challenge
+          </button>
+        </div>
+      )}
+      <button
         className=" mt-8
          border border-gray-300 rounded-lg
-              bg-gray-100 hover:bg-gray-200
+               bg-[#3a3a3c] hover:bg-neutral-800
               transition-colors duration-200 rounded-xl
             "
         onClick={resetAll}
         aria-label="Reset all challenges"
       >
-        <p className="text-center m-auto">Reset</p>
+        <p className="text-center">Reset</p>
       </button>
     </div>
   );
