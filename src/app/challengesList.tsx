@@ -110,7 +110,7 @@ export default function ChallengesList() {
         </a>
       ))}
       <button
-        className=" mt-6
+        className="mt-6
          border border-gray-300 rounded-lg
                bg-[#3a3a3c] hover:bg-neutral-800
               transition-colors duration-200 rounded-xl
@@ -142,7 +142,7 @@ export default function ChallengesList() {
           />
           <button
             onClick={handleAddChallenge}
-            className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            className="p-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
           >
             Add Challenge
           </button>
