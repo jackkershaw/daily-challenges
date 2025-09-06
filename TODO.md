@@ -1,3 +1,2 @@
 - If button clicked today goes green. use local storage and react state.
 - Add rearrange option. use [drag and drop functionality](https://dndkit.com/) and store order in state and local storage.
-- Maybe square UI layout like ny times games.
