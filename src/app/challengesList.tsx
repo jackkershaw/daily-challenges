@@ -1,63 +1,8 @@
 "use client";
 
-import { useState } from "react";
-
-const currentDate = new Date().toLocaleString("default", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
-
-const defaultChallenges = [
-  {
-    id: "wordle",
-    name: "Wordle",
-    url: "https://www.nytimes.com/games/wordle/index.html",
-  },
-  {
-    id: "cluesbysam",
-    name: "Clues By Sam",
-    url: "https://cluesbysam.com/",
-  },
-  {
-    id: "spellingbee",
-    name: "Spelling Bee",
-    url: "https://spellbee.org/",
-  },
-  {
-    id: "newyorkercrossword",
-    name: "New Yorker Crossword",
-    url: "https://www.newyorker.com/puzzles-and-games-dept/crossword",
-  },
-  {
-    id: "heardlehiphop",
-    name: "Heardle Hip Hop",
-    url: "https://hiphop.heardlegames.xyz/",
-  },
-  {
-    id: "worldle",
-    name: "Worldle",
-    url: "https://worldle.teuteuf.fr/",
-  },
-  { id: "framed", name: "Framed", url: "https://framed.wtf" },
-  {
-    id: "waffle",
-    name: "Waffle",
-    url: "https://wafflegame.net/daily",
-  },
-  { id: "metrodle", name: "Metrodle", url: "https://metrodle.com/" },
-  {
-    id: "timeguessr",
-    name: "Timeguessr",
-    url: "https://timeguessr.com/",
-  },
-  { id: "hexcodle", name: "Hexcodle", url: "https://hexcodle.com/" },
-  {
-    id: "wordslicer",
-    name: "Word Slicer",
-    url: "https://wordslicer.com/",
-  },
-];
+import { useState, useEffect } from "react";
+import defaultChallenges from "./defaultchallenges";
+import currentDate from "./date";
 
 const clickButton = (url: string, id: string) => {
   window.open(url, "_blank");
@@ -69,27 +14,55 @@ const resetAll = () => {
   window.location.reload();
 };
 
+const isValidUrl = (url: string) => {
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
+
 export default function ChallengesList() {
+  const [challenges, setChallenges] = useState(defaultChallenges);
   const [addClicked, setAddClicked] = useState(false);
   const [newChallengeName, setNewChallengeName] = useState("");
   const [newChallengeUrl, setNewChallengeUrl] = useState("");
 
+  useEffect(() => {
+    const saved = localStorage.getItem("challenges");
+    if (saved) {
+      setChallenges(JSON.parse(saved));
+    }
+  }, []);
+
   const handleAddChallenge = () => {
-    if (newChallengeName && newChallengeUrl) {
+    if (
+      newChallengeName &&
+      newChallengeUrl &&
+      isValidUrl(newChallengeUrl)
+    ) {
       const newChallenge = {
         id: newChallengeName.toLowerCase().replace(/\s+/g, ""),
         name: newChallengeName,
         url: newChallengeUrl,
       };
-      defaultChallenges.push(newChallenge);
+      const updatedChallenges = [...challenges, newChallenge];
+      localStorage.setItem(
+        "challenges",
+        JSON.stringify(updatedChallenges)
+      );
       setNewChallengeName("");
       setNewChallengeUrl("");
       setAddClicked(false);
+      window.location.reload();
+    } else {
+      alert("Please enter a valid challenge name and URL.");
     }
   };
   return (
     <div className="grid grid-cols-1 gap-y-3 mx-auto">
-      {defaultChallenges.map((challenge) => (
+      {challenges.map((challenge) => (
         <a
           key={challenge.id}
           href={challenge.url}

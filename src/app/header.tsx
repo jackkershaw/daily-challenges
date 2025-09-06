@@ -1,8 +1,4 @@
-const currentDate = new Date().toLocaleString("default", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+import currentDate from "./date";
 
 export default function Header() {
   return (
