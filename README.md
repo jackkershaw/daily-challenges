@@ -25,4 +25,3 @@ After making the initial design I decided to make some changes to the site.
 - Added feature to add your own challenges, using state and localStorage to store new challenges. Used isValidUrl to ensure that users input working urls for challenge sites.
 - Split code into components, for easier reusability and to improve developer experience.
 - I found it difficult to make the button go green when the challenge has been clicked already today. This became much easier after putting the challenge button into its own component, as from there i could include functions to check whether that particular button had been clicked today.
-- Used [drag and drop kit to make the buttons drag and droppable](https://docs.dndkit.com/presets/sortable)
