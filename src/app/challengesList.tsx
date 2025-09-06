@@ -1,13 +1,7 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import defaultChallenges from "./defaultchallenges";
-import currentDate from "./date";
-
-const clickButton = (url: string, id: string) => {
-  window.open(url, "_blank");
-  localStorage.setItem(id, currentDate);
-};
+import ChallengeButton from "./challengeButton";
 
 const resetAll = () => {
   localStorage.clear();
@@ -63,24 +57,12 @@ export default function ChallengesList() {
   return (
     <div className="grid grid-cols-1 gap-y-3 mx-auto">
       {challenges.map((challenge) => (
-        <a
+        <ChallengeButton
           key={challenge.id}
-          href={challenge.url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button
-            className="
-              border border-gray-300 rounded-lg w-50
-              bg-[#3a3a3c] hover:bg-neutral-800
-
-              transition-colors duration-200 rounded-xl
-            "
-            onClick={() => clickButton(challenge.url, challenge.id)}
-          >
-            <p className="text-center">{challenge.name}</p>
-          </button>
-        </a>
+          id={challenge.id}
+          name={challenge.name}
+          url={challenge.url}
+        />
       ))}
       <button
         className="mt-6
