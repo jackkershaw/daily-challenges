@@ -21,7 +21,8 @@ export default function Popup() {
       <p className="text-lg">
         This is a website for collecting all the Wordle-adjacent daily
         challenges. After you visit each challenge, its button will
-        turn green. This resets everyday.
+        turn green. This resets everyday. You can also add your own
+        challenges at the bottom. Enjoy!
       </p>
 
       <div className="flex flex-col space-y-4 justify-center items-center mx-auto py-8">
