@@ -22,4 +22,6 @@ After making the initial design I decided to make some changes to the site.
 - Improved desktop css to show all the content.
 - Added animations using [Animista](https://animista.net).
 - Rebuilt with Tailwind CSS and modern Next.js functionality. This involved rewriting basic js logic in next.js client components.
+- Added feature to add your own challenges, using state and localStorage to store new challenges. Used isValidUrl to ensure that users input working urls for challenge sites.
+- Split code into components, for easier reusability and to improve developer experience.
 - Used [drag and drop kit to make the buttons drag and droppable](https://docs.dndkit.com/presets/sortable)
