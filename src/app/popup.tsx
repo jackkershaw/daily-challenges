@@ -22,7 +22,8 @@ export default function Popup() {
         This is a website for collecting all the Wordle-adjacent daily
         challenges. After you visit each challenge, its button will
         turn green. This resets everyday. You can also add your own
-        challenges at the bottom. Enjoy!
+        challenges at the bottom, and remove any challenges you don't
+        want to play. Enjoy!
       </p>
 
       <div className="flex flex-col space-y-4 justify-center items-center mx-auto py-8">
