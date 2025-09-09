@@ -1,1 +1,0 @@
-- add delete challenges option and put this in readme - I originally wanted to use [drag and drop kit to make the buttons drag and droppable](https://docs.dndkit.com/presets/sortable) but found it would instead be much easier for users to just be able to remove the default challenges they didn't want.

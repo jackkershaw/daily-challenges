@@ -25,3 +25,7 @@ After making the initial design I decided to make some changes to the site.
 - Added feature to add your own challenges, using state and localStorage to store new challenges. Used isValidUrl to ensure that users input working urls for challenge sites.
 - Split code into components, for easier reusability and to improve developer experience.
 - I found it difficult to make the button go green when the challenge has been clicked already today. This became much easier after putting the challenge button into its own component, as from there i could include functions to check whether that particular button had been clicked today.
+- I originally wanted to use [drag and drop kit to make the buttons drag and droppable](https://docs.dndkit.com/presets/sortable) but found it would instead be much easier for users to just be able to remove the default challenges they didn't want.
+- Add remove challenge button to remove both user added (with filter by id) and default challenges, storing removed defaults in local storage and loading removed defaults with user added defaults from local storage on initial load.
+
+- Please submit an issue if you have any suggestions for how to improve the site, i'm always open to new ideas.
