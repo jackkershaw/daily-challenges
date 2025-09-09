@@ -18,7 +18,20 @@ const isValidUrl = (url: string) => {
 };
 
 export default function ChallengesList() {
-  const [challenges, setChallenges] = useState(defaultChallenges);
+  const [challenges, setChallenges] = useState(() => {
+    const removedDefaults = JSON.parse(
+      localStorage.getItem("removedDefaults") || "[]"
+    );
+
+    const filteredDefaults = defaultChallenges.filter(
+      (challenge) => !removedDefaults.includes(challenge.id)
+    );
+
+    const savedChallenges = localStorage.getItem("challenges");
+    return savedChallenges
+      ? JSON.parse(savedChallenges)
+      : filteredDefaults;
+  });
   const [addClicked, setAddClicked] = useState(false);
   const [newChallengeName, setNewChallengeName] = useState("");
   const [newChallengeUrl, setNewChallengeUrl] = useState("");
@@ -55,15 +68,17 @@ export default function ChallengesList() {
     }
   };
   return (
-    <div className="grid grid-cols-1 gap-y-3 mx-auto">
-      {challenges.map((challenge) => (
-        <ChallengeButton
-          key={challenge.id}
-          id={challenge.id}
-          name={challenge.name}
-          url={challenge.url}
-        />
-      ))}
+    <div className="grid grid-cols-1 mx-auto gap-3">
+      {challenges.map(
+        (challenge: { id: string; name: string; url: string }) => (
+          <ChallengeButton
+            key={challenge.id}
+            id={challenge.id}
+            name={challenge.name}
+            url={challenge.url}
+          />
+        )
+      )}
       <button
         className="mt-6
          border border-gray-300 rounded-lg
